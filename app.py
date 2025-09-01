@@ -1,4 +1,4 @@
-# rag_app.py
+
 import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
@@ -8,23 +8,18 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 import tempfile
 
-# ------------------------
-# Streamlit UI Config
-# ------------------------
+
 st.set_page_config(
     page_title="Anay's PDF RAG Chat",
     page_icon="⚡",
     layout="wide"
 )
 
-# ------------------------
-# Custom CSS Styling
-# ------------------------
 st.markdown("""
     <style>
         /* Background gradient */
         .stApp {
-            background: linear-gradient(135deg, #000000, #0a1f44, #1e6091);
+            background: linear-gradient(110deg, #010101, #0a1f44, #1e6091);
             color: white;
             font-family: 'Poppins', sans-serif;
         }
@@ -38,13 +33,13 @@ st.markdown("""
         .title-container h1 {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            color: #ffffff;
+            color: linear-gradient(0deg, #98FBCB, #0077BE);
         }
         .title-container p {
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
             font-size: 16px;
-            color: #a8dadc;
+            color: linear-gradient(0deg, #98FBCB, #0077BE);
         }
 
         .chat-message {
